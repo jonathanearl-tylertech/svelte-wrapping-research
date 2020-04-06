@@ -8,14 +8,12 @@
 
     function toggleVisible() {
         // setTimeout(() => {
-            console.log(targetid); // Hello World!
+        console.log('targetid', targetid); // Hello World!
         let target = document.querySelector(`#${targetid}`);
-        // }, 0);
-        // console.log('targetId', targetId);
-        // let target = document.querySelector(`#${targetId}`);
-        // console.log('target', target);
-        // let inputType = target.getAttribute('type');
+        console.log('target', target); // Hello World!
+        let inputType = target.getAttribute('type');
         // console.log(inputType)
+        target.setAttribute('type', 'password');
     }
 
     onMount(() => {
@@ -38,7 +36,7 @@
 
 <style>
     ::slotted(input) {
-        width: calc(100% - 50px);
+        width: calc(100% - 50px) !important;
         border: none;
         inset: none;
         background-color: grey;
